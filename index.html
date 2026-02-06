@@ -1,0 +1,278 @@
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+<meta charset="UTF-8"/>  
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+<title>Ka17aan App Venture</title>  <style>  
+:root{  
+ --bg:#ffffff;  
+ --text:#000;  
+ --card:#f1f1f1;  
+ --primary:#0d6efd;  
+ --border:#ddd;  
+}  
+  
+.dark{  
+ --bg:#05070a;  
+ --text:#e6edf3;  
+ --card:#0d1117;  
+ --primary:#00c3ff;  
+ --border:#111;  
+}  
+  
+body{  
+ margin:0;  
+ font-family:system-ui,Segoe UI;  
+ background:var(--bg);  
+ color:var(--text);  
+}  
+  
+/* NAVBAR */  
+nav{  
+ display:flex;  
+ flex-direction:column;  
+ align-items:center;  
+ background:#111;  
+ padding:12px;  
+}  
+  
+.navlinks{  
+ display:flex;  
+ gap:10px;  
+ flex-wrap:wrap;  
+ justify-content:center;  
+ margin-bottom:8px;  
+}  
+  
+.navlinks a{  
+ color:#fff;  
+ text-decoration:none;  
+ padding:6px 10px;  
+ border-radius:8px;  
+ background:#1a1a1a;  
+}  
+  
+.themebtn{  
+ background:#0d6efd;  
+ color:#fff;  
+ border:none;  
+ padding:8px 14px;  
+ border-radius:10px;  
+}  
+  
+/* LAYOUT */  
+.container{  
+ max-width:1100px;  
+ margin:auto;  
+ padding:15px;  
+}  
+  
+.grid{  
+ display:grid;  
+ grid-template-columns:1fr;  
+ gap:12px;  
+}  
+  
+@media(min-width:700px){  
+ .grid{grid-template-columns:1fr 1fr;}  
+}  
+  
+.card{  
+ background:var(--card);  
+ padding:14px;  
+ border-radius:14px;  
+ border:1px solid var(--border);  
+ cursor:pointer;  
+}  
+  
+.btn{  
+ padding:9px 12px;  
+ background:var(--primary);  
+ color:#000;  
+ border-radius:10px;  
+ text-decoration:none;  
+ display:inline-block;  
+}  
+  
+.badge{  
+ display:inline-block;  
+ padding:6px 11px;  
+ border:1px solid var(--border);  
+ border-radius:10px;  
+ margin:4px;  
+}  
+  
+.profile{  
+ width:120px;  
+ height:120px;  
+ border-radius:50%;  
+ border:3px solid var(--primary);  
+}  
+  
+/* STATS */  
+.stats{  
+ display:flex;  
+ justify-content:space-around;  
+ margin:18px 0;  
+ text-align:center;  
+}  
+  
+.arrow{float:right;transition:.3s;}  
+.open .arrow{transform:rotate(180deg);}  
+  
+.faq-a{display:none;margin-top:6px;}  
+  
+footer{  
+ text-align:center;  
+ margin:20px 0;  
+ opacity:.8;  
+}  
+</style>  </head>  <body>  <nav>  
+<div class="navlinks">  
+<a href="#projects">Projects</a>  
+<a href="#services">Services</a>  
+<a href="#skills">Skills</a>  
+<a href="#faq">FAQ</a>  
+<a href="#about">About</a>  
+</div>  <button class="themebtn" onclick="toggleTheme()">  
+Theme  
+</button>  
+</nav>  <div class="container">  <!-- PROFILE -->  <center>  
+<img class="profile" src="profile.png"/>  <h1>  
+Kaishan Khan    
+<span style="font-size:14px;opacity:.8">  
+(Age 18 • 11 Oct)  
+</span>  
+</h1>  <p>Ka17aan App Venture</p>  
+</center>  <!-- STATS (AB OPEN PE) -->  <div class="stats">  
+<div>  
+<h2 id="uCount">0</h2>  
+Users Served  
+</div>  <div>  
+<h2 id="rCount">0</h2>  
+Rating ⭐  
+</div>  
+</div>  <!-- ABOUT -->  <h2 id="about">About Me</h2>  <div class="card">  
+I am an independent developer focused on Android, backend and automation.  Created platforms:
+
+• Tournament system
+• Study platform
+• Earning app
+• Automatic payment gateway
+• Receipt generator
+
+Flow:
+App → Backend → Security → Automation → Support
+
+</div>  <!-- PROJECTS -->  <h2 id="projects">Projects You Can Buy</h2>  <div class="grid">  <!-- TOURNAMENT -->  <div class="card" onclick="toggle('p1',this)">  
+<b>Tournament Platform</b>  
+<span class="arrow">▼</span>  <div id="p1" style="display:none">  <ul>  
+<li>Auto room creation</li>  
+<li>Wallet system</li>  
+<li>UPI auto verify</li>  
+<li>Result panel</li>  
+<li>Push notification</li>  
+<li>Admin dashboard</li>  
+<li>Anti fraud</li>  
+</ul>  <del>₹14,000</del> <b>₹6,000</b><br/>
+<a class="btn" href="tournament-buy.html">Buy Now</a>
+
+</div>  
+</div>  <!-- GATEWAY -->  <div class="card" onclick="toggle('p2',this)">  
+<b>Automatic Payment Gateway</b>  
+<span class="arrow">▼</span>  <div id="p2" style="display:none">  <ul>  
+<li>UPI reference match</li>  
+<li>Auto coin credit</li>  
+<li>Fraud check</li>  
+<li>Transaction logs</li>  
+<li>Webhook verify</li>  
+</ul>  <del>₹3999</del> <b>₹999</b><br/>
+<a class="btn" href="unavailable.html?app=gateway">Buy Now</a>
+
+</div>  
+</div>  <!-- RECEIPT -->  <div class="card" onclick="toggle('p3',this)">  
+<b>Receipt Generator App</b>  
+<span class="arrow">▼</span>  <div id="p3" style="display:none">  <ul>  
+<li>PDF generate</li>  
+<li>Custom fields</li>  
+<li>Share option</li>  
+<li>History save</li>  
+</ul>  <del>₹299</del> <b>₹99</b><br/>
+<a class="btn" href="unavailable.html?app=receipt">Buy Now</a>
+
+</div>  
+</div>  </div>  <!-- SERVICES -->  <h2 id="services">Services</h2>  <div class="grid">  
+<div class="card">Android App Development</div>  
+<div class="card">Backend & Admin</div>  
+<div class="card">Payment Integration</div>  
+<div class="card">Security Audit</div>  
+<div class="card">Bug Fix</div>  
+<div class="card">Firebase Setup</div>  
+</div>  <!-- SKILLS -->  <h2 id="skills">Skills</h2>  <div class="card">  
+<span class="badge">Android</span>  
+<span class="badge">Java</span>  
+<span class="badge">PHP</span>  
+<span class="badge">MySQL</span>  
+<span class="badge">Firebase</span>  <span class="badge">API Security</span>
+<span class="badge">Automation</span>
+<span class="badge">Anti Fraud</span>
+<span class="badge">UI/UX</span>
+<span class="badge">Debugging</span>
+
+<span class="badge">Server</span>
+<span class="badge">Webhook</span>
+
+</div>  <!-- FAQ -->  <h2 id="faq">FAQ</h2>  <div class="card" onclick="faq(this)">  
+<b>Do you provide source code?</b>  
+<div class="faq-a">Yes full source after purchase.</div>  
+</div>  <div class="card" onclick="faq(this)">  
+<b>Payment safe?</b>  
+<div class="faq-a">100% secure verification.</div>  
+</div>  <div class="card" onclick="faq(this)">  
+<b>Support time?</b>  
+<div class="faq-a">30 days free support.</div>  
+</div>  <footer>  
+© 2025–2026 Ka17aan App Venture. All rights reserved.  
+</footer>  </div>  <script>  
+// THEME SYNC  
+function toggleTheme(){  
+ document.body.classList.toggle("dark");  
+  
+ if(document.body.classList.contains("dark"))  
+   localStorage.setItem("theme","dark");  
+ else  
+   localStorage.setItem("theme","light");  
+}  
+  
+window.onload=function(){  
+ if(localStorage.getItem("theme")=="dark")  
+   document.body.classList.add("dark");  
+  
+ // STATS ANIMATION ON OPEN  
+ animate("uCount",45000,500,0);  
+ animate("rCount",4.8,0.1,1);  
+}  
+  
+// TOGGLE  
+function toggle(id,el){  
+ var x=document.getElementById(id);  
+ x.style.display=x.style.display=='block'?'none':'block';  
+ el.classList.toggle('open');  
+}  
+  
+function faq(el){  
+ var a=el.querySelector('.faq-a');  
+ a.style.display=a.style.display=='block'?'none':'block';  
+}  
+  
+// STATS  
+function animate(id,target,step,fixed=0){  
+ let el=document.getElementById(id);  
+ let v=0;  
+ let t=setInterval(()=>{  
+   v+=step;  
+   if(v>=target){v=target;clearInterval(t);}  
+   el.innerText=v.toFixed(fixed)+"+";  
+ },40);  
+}  
+</script>  </body>  
+</html>

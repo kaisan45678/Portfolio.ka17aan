@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tournament Platform – Buy</title>
+
+<style>
+body{
+ margin:0;
+ font-family:system-ui,Segoe UI;
+ background:#f6f7fb;
+}
+
+.container{
+ max-width:1000px;
+ margin:auto;
+ padding:15px;
+}
+
+.hero{
+ background:#0d1117;
+ color:white;
+ padding:20px;
+ border-radius:14px;
+}
+
+.card{
+ background:#fff;
+ border:1px solid #ddd;
+ border-radius:12px;
+ padding:14px;
+ margin:10px 0;
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:1fr;
+ gap:10px;
+}
+
+@media(min-width:700px){
+ .grid{grid-template-columns:1fr 1fr;}
+}
+
+.btn{
+ display:inline-block;
+ padding:10px 14px;
+ background:#0d6efd;
+ color:white;
+ text-decoration:none;
+ border-radius:10px;
+ margin:5px 0;
+ cursor:pointer;
+}
+
+.eye{
+ cursor:pointer;
+ padding:6px 8px;
+ border:1px solid #ccc;
+ border-radius:8px;
+ margin-left:6px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a class="btn" href="index.html">← Back to Website</a>
+
+<!-- HERO -->
+<div class="hero">
+<h2>Tournament Platform – Complete System</h2>
+
+<p>
+Ready made esports app with wallet, auto result,  
+UPI verification and full admin panel.
+</p>
+
+<del>₹14,000</del>  
+<b>Offer: ₹6,000</b>
+
+<br/><br/>
+
+<a class="btn"
+href="https://wa.me/639303099585?text=I%20want%20to%20buy%20Tournament%20Platform">
+Confirm Buy on WhatsApp
+</a>
+</div>
+
+<!-- USER APP -->
+<h3>User Application</h3>
+
+<div class="grid">
+
+<div class="card">
+• Account login / signup  
+• Match join system  
+• Wallet add money  
+• Auto result  
+• Notifications  
+• Refer system  
+• Bonus coins  
+</div>
+
+<div class="card">
+• Withdraw request  
+• History  
+• Anti cheat  
+• Room auto show  
+• Support page  
+• Security check  
+</div>
+
+</div>
+
+<!-- ADMIN -->
+<h3>Admin Panel</h3>
+
+<div class="grid">
+
+<div class="card">
+• Create match  
+• Set entry fee  
+• Add / deduct coins  
+• Block user  
+• Result manage  
+</div>
+
+<div class="card">
+• Payment verify  
+• Withdraw approve  
+• Notification send  
+• Logs system  
+</div>
+
+</div>
+
+<!-- DEMO SECTION -->
+<h3>Demo Access</h3>
+
+<div class="card">
+
+<!-- APK DOWNLOAD -->
+<a class="btn" href="apk/user-demo.apk" download>
+User Demo APK Download
+</a>
+
+<br/>
+
+<!-- ADMIN DEMO LINK -->
+<a class="btn" href="https://YOUR_ADMIN_LINK" target="_blank">
+Open Admin Demo
+</a>
+
+<br/><br/>
+
+<!-- VIEW ID PASS -->
+<b>View Demo Admin ID & Password</b>
+
+<span class="eye" onclick="showCreds()">👁 Show</span>
+
+<div id="creds" style="display:none;margin-top:10px;">
+
+Admin URL: https://YOUR_ADMIN_LINK  
+<br/>
+ID: admin  
+<br/>
+Pass: 123456  
+
+</div>
+
+<p style="font-size:13px;">
+APK file location:<br/>
+public_html / apk / user-demo.apk
+</p>
+
+</div>
+
+<!-- AFTER PURCHASE -->
+<h3>After Purchase</h3>
+
+<div class="card">
+
+• Full source code  
+• Database file  
+• Admin panel  
+• Setup guide  
+• 30 days support  
+• App rename  
+• Logo change  
+
+</div>
+
+</div>
+
+<script>
+// SHOW HIDE ADMIN ID PASS
+function showCreds(){
+ let x = document.getElementById("creds");
+
+ if(x.style.display=="block"){
+   x.style.display="none";
+ }else{
+   x.style.display="block";
+ }
+}
+
+// THEME SYNC (AGAR MAIN SITE SE DARK AAYE)
+window.onload=function(){
+ if(localStorage.getItem("theme")=="dark"){
+   document.body.style.background="#05070a";
+ }
+}
+</script>
+
+</body>
+</html>

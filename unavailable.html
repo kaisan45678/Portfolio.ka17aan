@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Currently Unavailable</title>
+
+<style>
+body{
+ margin:0;
+ font-family:system-ui,Segoe UI;
+ background:#f6f7fb;
+}
+
+/* DARK SUPPORT */
+.dark{
+ background:#05070a;
+ color:#fff;
+}
+
+.container{
+ max-width:900px;
+ margin:auto;
+ padding:16px;
+}
+
+.card{
+ background:#fff;
+ border:1px solid #ddd;
+ border-radius:16px;
+ padding:16px;
+ margin:10px 0;
+ text-align:center;
+}
+
+.dark .card{
+ background:#0d1117;
+ border:1px solid #222;
+}
+
+.btn{
+ display:inline-block;
+ padding:10px 14px;
+ background:#0d6efd;
+ color:white;
+ text-decoration:none;
+ border-radius:10px;
+ margin:6px 0;
+}
+
+/* ANIMATION */
+.fade{
+ animation:fade 0.6s ease;
+}
+
+@keyframes fade{
+ from{opacity:0;transform:translateY(10px);}
+ to{opacity:1;transform:translateY(0);}
+}
+
+.tag{
+ display:inline-block;
+ padding:5px 10px;
+ border:1px solid #ccc;
+ border-radius:10px;
+ margin-top:6px;
+ font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container fade">
+
+<a class="btn" href="index.html">← Back to Website</a>
+
+<div class="card">
+
+<h2 id="appName">This Project</h2>
+
+<p>
+This product is currently not available for  
+direct purchase from website.
+</p>
+
+<div class="tag">
+Custom Setup Required
+</div>
+
+<br/><br/>
+
+<a class="btn" id="waBtn"
+href="#">
+Contact on WhatsApp
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Why Unavailable?</h3>
+
+• Need custom configuration  
+• Client specific setup  
+• Server linking required  
+• Security verification  
+
+</div>
+
+<div class="card">
+
+<h3>What You Will Get</h3>
+
+• Full source code  
+• Setup support  
+• Custom branding  
+• 30 days help  
+
+</div>
+
+</div>
+
+<script>
+// ===== GET APP NAME FROM URL =====
+let p = new URLSearchParams(window.location.search);
+let app = p.get("app") || "This Project";
+
+let nameMap = {
+  study:"Study App",
+  earning:"Earning App",
+  gateway:"Automatic Payment Gateway",
+  receipt:"Receipt Generator App"
+};
+
+let finalName = nameMap[app] || app;
+
+document.getElementById("appName").innerText = finalName;
+
+// ===== WHATSAPP AUTO MESSAGE =====
+let wa = document.getElementById("waBtn");
+
+let msg = `I want to buy ${finalName}. Please provide details.`;
+
+wa.href =
+"https://wa.me/639303099585?text=" +
+encodeURIComponent(msg);
+
+// ===== THEME SYNC =====
+window.onload=function(){
+ if(localStorage.getItem("theme")=="dark"){
+   document.body.classList.add("dark");
+ }
+}
+</script>
+
+</body>
+</html>
